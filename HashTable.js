@@ -6,6 +6,8 @@ function hashStringToInt(phno, tableSize) {
         hash *= parseInt(s[i]);
     return hash % tableSize;
 }
+
+//Class HashTable:
 class HashTable {
     table = new Array(3);
     numItems = 0;
@@ -71,7 +73,7 @@ class HashTable {
         }
         return val;
     };
-  }
+}
   
 const myTable = new HashTable();
 
