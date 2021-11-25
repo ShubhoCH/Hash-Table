@@ -113,5 +113,8 @@ console.log(myTable.getItem(0987654621));
 // Trying to access the value for a key whose hashed index is 
 // not present and is empty in the Array(Hastable):
 console.log(myTable.getItem(1111111111));
+//=> Not Present
+
 // Trying to access the value for a key whose hashed index is present but key doesn't match:
 console.log(myTable.getItem(4973831544));
+//=> Not Present
