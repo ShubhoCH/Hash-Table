@@ -1,5 +1,5 @@
 // Hash Function:
-function hashStringToInt(phno, tableSize) {
+function hashPhnoToIndex(phno, tableSize) {
     let hash = 1;
     let s = phno.toString();
     for(let i = 3;i<7;i++)
@@ -20,7 +20,7 @@ class HashTable {
       this.table.forEach(item => {
         if (item) {
           item.forEach(([key, value]) => {
-            const idx = hashStringToInt(key, newTable.length);
+            const idx = hashPhnoToIndex(key, newTable.length);
             if (newTable[idx]) {
               newTable[idx].push([key, value]);
             } else {
@@ -41,7 +41,7 @@ class HashTable {
           this.resize();
         }
       
-        const idx = hashStringToInt(key,this.table.length);
+        const idx = hashPhnoToIndex(key,this.table.length);
         if (this.table[idx]) {
             // In case the Hash index(idx) Already has some elements:
             this.table[idx].push([key, value]);
@@ -53,7 +53,7 @@ class HashTable {
     
     // Check & Return, if any value is present for any particular Key:
     getItem = key => {
-        const idx = hashStringToInt(key, this.table.length);
+        const idx = hashPhnoToIndex(key, this.table.length);
         if (!this.table[idx]) {
             // Incase the Hashed_Index(idx) has 0 elements:
             return "Not Present";
