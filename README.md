@@ -6,8 +6,8 @@
 
 # Input Constrain:
 
-- {Key, Value} Pair must of Data type {Intger, String}
-- Key must be 10 digit Long Representing valid Phone No.
+- {Key, Value} Pair must be of data type {Integer, String}
+- Key must be 10 digit Long Representing valid Phone Number.
     #### Note: If Not add an Additional if statement to check for it's length using: 
         if(key.toString().length != 10) { 
             console.log("Invalid Phno. -> " + key); 
